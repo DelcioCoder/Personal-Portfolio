@@ -41,7 +41,7 @@ const projects = [
   {
     id: 5,
     title: 'Harvest clean site',
-    image: '/images/harvestclen.png',
+    image: '/images/harvestclean.png',
     description: 'Este é um site informativo para a empresa Harvest, desenvolvi usando o React js, Tailwind css e GSAP para animação',
     link: 'https://github.com/DelcioCoder/bruno-frontend',
     icon: <FaGithub />
