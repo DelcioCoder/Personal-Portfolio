@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaVideo } from 'react-icons/fa6';
 
+import { RiGitRepositoryPrivateFill } from "react-icons/ri";
+
 const projects = [
   {
     id: 1,
@@ -37,6 +39,15 @@ const projects = [
     icon: <FaGithub />,
     video: <FaVideo />,
     video_link: '/video/itunevideo.mp4'
+  },
+
+  {
+    id: 5,
+    title:"workbrain",
+    image: '/images/workbrain_picture.png',
+    description: 'Esta, é uma aplicação web pessoal que me permite ter o máximo controle das actividades que tenho proposto a mim mesmo de forma mensal. Foi desenvolvida usando o Django, DRF(django rest framework) para construção da api, implementei segurança baseado em token JWT(json web token) e foi usado o React js para construção da interface do usuário.',
+    link: 'Private repository.',
+    icon: <RiGitRepositoryPrivateFill />
   }
 ];
 
