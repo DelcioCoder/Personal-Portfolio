@@ -48,6 +48,15 @@ const projects = [
     description: 'Esta, é uma aplicação web pessoal que me permite ter o máximo controle das actividades que tenho proposto a mim mesmo de forma mensal. Foi desenvolvida usando o Django, DRF(django rest framework) para construção da api, implementei segurança baseado em token JWT(json web token) e foi usado o React js para construção da interface do usuário.',
     link: 'Private repository.',
     icon: <RiGitRepositoryPrivateFill />
+  },
+
+  {
+    id: 6,
+    title: 'Harvestclean site',
+    image: '/images/harvestcleansite.png',
+    description: 'Este é um site informativo que desenvolvi para a empresa harvestclean com grande foco em UI/UX usando o React js e framer motion para animação.',
+    link: 'https://github.com/DelcioCoder/bruno-frontend',
+    icon: <FaGithub />
   }
 ];
 
@@ -63,17 +72,17 @@ export default function Portfolio({ showMenu }) {
 
       <motion.div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full justify-items-center'>
         {projects.map(project => (
-          <motion.div key={project.id} className='border h-100 rounded-lg p-4 shadow-md cursor-pointer mx-2'>
+          <motion.div key={project.id} className='border h-100 rounded-lg p-4 shadow-md cursor-pointer mx-2 flex flex-col'>
             <img src={project.image} alt={project.title} className='w-full h-48 object-cover transform transition duration-300 hover:scale-110' />
             <h2 className='text-2xl font-bold mt-2'>{project.title}</h2>
             <p className='text-sm'>{project.description}</p>
-            <div className='mt-10 flex gap-8'>
-              <a href={project.link} className='text-2xl cursor-pointer'>
+            <div className='mt-auto flex gap-8'>
+              <a href={project.link} className='text-2xl mt-5 cursor-pointer'>
                 {project.icon}
               </a>
 
               {project.video && (
-                <a href={project.video_link} target='blank' className='text-2xl cursor-pointer ml-2'>
+                <a href={project.video_link} target='blank' className='text-2xl cursor-pointer ml-2 mt-5'>
                   {project.video}
                 </a>
               )}
